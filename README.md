@@ -22,35 +22,35 @@ The project provides a modular and executable implementation of Markus Schulze's
 ## Project Structure
 
 ```text
-SchulzeMethod/
-├── Input/
-│   ├── CandidateSet
-│   ├── Ballot
-│   └── Profile
+├── SchulzeMethod
 │
-├── LinkStrength/
-│   ├── PairwisePreference
-│   └── LinkStrength
-│
-├── StrengthOrder/
-│   ├── StrengthOrder
-│   ├── MinLink
-│   ├── MaxLink
-│   └── Margin
-│
-├── Path/
-│   ├── Path
-│   ├── AllPathsPermutation
-│   └── StrongestPath
-│
-├── WinnerComputation/
-│   ├── WinnerRelation
-│   └── Winner
-│
-├── Examples/
-│   └── ExampleElection
-│
-└── SchulzeMethod
+└── SchulzeMethod/
+    ├── Input/
+    │   ├── CandidateSet
+    │   ├── Ballot
+    │   └── Profile
+    │
+    ├── LinkStrength/
+    │   ├── PairwisePreference
+    │   └── LinkStrength
+    │
+    ├── StrengthOrder/
+    │   ├── StrengthOrder
+    │   ├── MinLink
+    │   ├── MaxLink
+    │   └── Margin
+    │
+    ├── Path/
+    │   ├── Path
+    │   ├── AllPathsPermutation
+    │   └── StrongestPath
+    │
+    ├── WinnerComputation/
+    │   ├── WinnerRelation
+    │   └── Winner
+    │
+    └── Examples/
+        └── ExampleElection
 ```
 
 
