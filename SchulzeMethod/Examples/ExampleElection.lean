@@ -1,6 +1,6 @@
 import Mathlib.Data.Finset.Insert
 
-import SchulzeMethod.SchulzeMethod
+import SchulzeMethod
 import SchulzeMethod.StrengthOrder.Margin
 
 namespace Schulze
