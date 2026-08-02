@@ -5,34 +5,38 @@ import SchulzeMethod.StrengthOrder.Margin
 
 namespace Schulze
 
-inductive MyCandidate
-  | A
-  | B
-  | C
-  | D
+inductive Candidate
+  | a
+  | b
+  | c
+  | d
   deriving DecidableEq, Repr
 
-open MyCandidate
+open Candidate
 
-instance : Fintype MyCandidate where
-  elems := {A, B, C, D}
+instance : Fintype Candidate where
+  elems := {a, b, c, d}
   complete := by intro x; cases x <;> trivial
 
 
-def exampleElection : Except String (List MyCandidate) :=
-  let candidates := [A, B, C, D]
+def exampleElection : Except String (List Candidate) :=
+  let candidates := [a, b, c, d]
   let ballots := [
-    [A, B, C, D], [A, B, C, D], [A, B, C, D],
-    [A, C, B, D], [A, C, B, D],
-    [B, C, D, A], [B, C, D, A],
-    [B, D, A, C],
-    [C, A, B, D],
-    [D, C, B, A]
+    [b, c], [b, c], [b, c],
+    [c, d, a], [c, d, a],
+    [a, b], [a, b],
+    [d], [d],
+    [d, c]
   ]
   schulzeMethod margin candidates CandidateSet.fromList ballots Profile.fromLists
 
 
 #eval exampleElection
+
+/-
+Output of #eval-statement:
+  Except.ok [Schulze.Candidate.b]
+-/
 
 
 end Schulze
